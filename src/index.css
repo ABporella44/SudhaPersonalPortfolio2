@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------
+   Theme tokens
+   Each data-theme block redefines the same set
+   of CSS variables consumed via Tailwind colors
+   (see tailwind.config.js) — swapping the
+   attribute on <html> re-themes the whole app.
+---------------------------------------------- */
+
+:root,
+[data-theme='ocean'] {
+  --bg-primary: #0a2e3d;
+  --bg-secondary: #0d3c4e;
+  --bg-card: #113f52;
+  --bg-elevated: #124a60;
+  --accent: #4fd1e0;
+  --accent-soft: #a9e8ef;
+  --accent-strong: #22b8cc;
+  --text-primary: #f2f8f9;
+  --text-muted: #b7cdd3;
+  --text-faint: #7fa0a8;
+  --border: rgba(255, 255, 255, 0.1);
+  --gradient-hero: linear-gradient(160deg, #0a2e3d 0%, #0e4356 55%, #0a3040 100%);
+}
+
+[data-theme='nebula'] {
+  --bg-primary: #181233;
+  --bg-secondary: #221a44;
+  --bg-card: #271e4d;
+  --bg-elevated: #2e2359;
+  --accent: #b18cff;
+  --accent-soft: #dcccff;
+  --accent-strong: #8f5eff;
+  --text-primary: #f5f2ff;
+  --text-muted: #c6bce3;
+  --text-faint: #8a7fb0;
+  --border: rgba(255, 255, 255, 0.1);
+  --gradient-hero: linear-gradient(160deg, #181233 0%, #2c1f57 55%, #1a1338 100%);
+}
+
+[data-theme='ember'] {
+  --bg-primary: #241813;
+  --bg-secondary: #2f1e17;
+  --bg-card: #34221a;
+  --bg-elevated: #3c281e;
+  --accent: #ff9d5c;
+  --accent-soft: #ffd3ac;
+  --accent-strong: #f2792e;
+  --text-primary: #fbf3ee;
+  --text-muted: #d9bfae;
+  --text-faint: #a9856f;
+  --border: rgba(255, 255, 255, 0.09);
+  --gradient-hero: linear-gradient(160deg, #241813 0%, #3a2416 55%, #26160f 100%);
+}
+
+[data-theme='forest'] {
+  --bg-primary: #0f2419;
+  --bg-secondary: #143020;
+  --bg-card: #163826;
+  --bg-elevated: #1b432d;
+  --accent: #7be08a;
+  --accent-soft: #c6f4ce;
+  --accent-strong: #45c25f;
+  --text-primary: #f1faf3;
+  --text-muted: #bcd8c4;
+  --text-faint: #7fa88c;
+  --border: rgba(255, 255, 255, 0.1);
+  --gradient-hero: linear-gradient(160deg, #0f2419 0%, #17402a 55%, #0f2a1c 100%);
+}
+
+[data-theme='graphite'] {
+  --bg-primary: #17181c;
+  --bg-secondary: #1e2025;
+  --bg-card: #212327;
+  --bg-elevated: #26282e;
+  --accent: #7dc4ff;
+  --accent-soft: #c3e4ff;
+  --accent-strong: #4fa4ea;
+  --text-primary: #f4f5f6;
+  --text-muted: #b7bcc4;
+  --text-faint: #7d838d;
+  --border: rgba(255, 255, 255, 0.08);
+  --gradient-hero: linear-gradient(160deg, #17181c 0%, #22242a 55%, #18191d 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-elevated);
+  border-radius: 999px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
