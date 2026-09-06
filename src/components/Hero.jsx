@@ -75,10 +75,10 @@ export default function Hero() {
             <div className="aspect-[4/3] w-full max-w-md overflow-hidden rounded-3xl border border-line shadow-soft">
               {!imgError ? (
                 <img
-                  src='./ssk2.jpeg'
+                  src='./Sudha3.jpeg'
                   alt={profile.name}
                   onError={() => setImgError(true)}
-                  className="h-full w-full object-cover"
+                  className="h-full max-h-[420px] w-full object-contain"
                 />
               ) : (
                 <div className="flex h-full w-full items-center justify-center bg-bg-card">
@@ -92,8 +92,6 @@ export default function Hero() {
             {/* testimonial carousel card */}
             {heroTestimonialPreviews.length > 0 && testimonial && (
               <div className="w-full max-w-md rounded-3xl border border-line bg-bg-card/90 p-8 shadow-soft">
-                <Quote size={24} className="text-accent" />
-
                 <div className="mt-5 flex items-start gap-5">
                   <img
                     src={testimonial.image}

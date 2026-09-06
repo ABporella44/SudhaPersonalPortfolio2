@@ -34,7 +34,7 @@ export default function Navbar() {
           className="flex items-center gap-2 font-display font-semibold text-ink text-lg shrink-0"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-full border border-accent text-accent font-display text-sm">
-            H
+            SSK
           </span>
           Sudha Sravanthi Kancharla
         </a>

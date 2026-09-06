@@ -1,4 +1,4 @@
-import { Download } from 'lucide-react'
+import { Download, Heading2 } from 'lucide-react'
 import { profile, experience } from '../data/data'
 
 export default function About() {
@@ -35,10 +35,11 @@ export default function About() {
               <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
               {profile.availability}
             </div>
-
             <a
-              href={profile.resumeUrl}
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-bg-elevated px-6 py-3 font-body text-sm font-semibold text-ink transition-colors hover:text-accent"
+              href="https://sudharesume.s3.eu-north-1.amazonaws.com/Resume_4.pdf"
             >
               Download Resume
               <Download size={15} />
@@ -59,17 +60,23 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-20 grid gap-6 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
-          {experience.map((job) => (
-            <div key={job.role}>
-              <p className="font-display text-sm font-semibold text-ink">{job.role}</p>
-              <p className="mt-1 font-body text-sm text-ink-muted">
-                {job.company} · {job.type}
-              </p>
-              <p className="mt-1 font-body text-xs text-ink-faint">{job.period}</p>
-            </div>
-          ))}
-        </div>
+<div className="mt-20 border-t border-line pt-10">
+  <h2 className="mt-6 font-display text-3xl font-semibold text-ink sm:text-4xl">
+    Experience :
+  </h2>
+
+  <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {experience.map((job) => (
+      <div key={job.role}>
+        <p className="font-display text-sm font-semibold text-ink">{job.role}</p>
+        <p className="mt-1 font-body text-sm text-ink-muted">
+          {job.company} · {job.type}
+        </p>
+        <p className="mt-1 font-body text-xs text-ink-faint">{job.period}</p>
+      </div>
+    ))}
+  </div>
+</div>
       </div>
     </section>
   )

@@ -45,7 +45,7 @@ export const navLinks = [
   { label: 'Skills', href: '#tech' },
   { label: 'Services', href: '#services' },
   { label: 'Education', href: '#education' },
-  // { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Get In Touch', href: '#contact' },
 ]
 
@@ -65,13 +65,23 @@ export const heroBadges = [
 export const heroTestimonialPreviews = [
   {
     image: './testimonial1.png',
-    author: 'John Doe',
+    author: 'Mounika Regonda',
     quote: 'Sudha is an exceptional business analyst who consistently delivers high-quality results.',
   },
   {
     image: './testimonial2.jpeg',
-    author: 'Jane Smith',
+    author: 'Radha krishna',
     quote: 'Working with Sudha has been a game-changer for our business analysis processes.',
+  },
+  {
+    image: './testimonial3.jpeg',
+    author: 'Abhilash porella',
+    quote: 'Sudha\'s expertise in business analysis has significantly improved our project outcomes.',
+  },
+    {
+    image: './testimonial4.jpeg',
+    author: 'Mounika Renigunta',
+    quote: 'Sudha\'s expertise in Agile methodologies has greatly enhanced our project delivery and team collaboration.',
   }
 ]
 
@@ -199,7 +209,43 @@ export const techStack = [
 ]
 
 export const services = [
+
   {
+    title: 'Claims & Fraud Analysis',
+    description:
+      'Claims adjudication, denial management, and fraud detection support across the full claims processing lifecycle.',
+  },
+  {
+    title: 'Manual Testing',
+    description:
+      'Functional, regression, and end-to-end test execution across web and enterprise applications, with detailed defect logging and traceability back to requirements.',
+  },
+  {
+    title: 'Test Planning & Strategy',
+    description:
+      'Test plans, test case design, and coverage matrices that align QA effort with release scope, risk areas, and acceptance criteria.',
+  },
+  {
+    title: 'Product Delivery Planning',
+    description:
+      'Release roadmaps, delivery timelines, and dependency mapping that keep product milestones realistic and visible across teams.',
+  },
+  {
+    title: 'Sprint Planning & Scrum Ceremonies',
+    description:
+      'Sprint planning, backlog grooming, daily stand-ups, sprint reviews, and retrospectives run to keep delivery predictable and continuously improving.',
+  },
+  {
+    title: 'Agile Team Facilitation',
+    description:
+      'Scrum Master / Product Owner support duties including backlog prioritization, velocity tracking, impediment removal, and cross-team coordination.',
+  },
+  {
+    title: 'UI/UX Design Collaboration',
+    description:
+      'Wireframes, mockups, and prototypes in Figma, translated into detailed design specs and handed off cleanly to development teams.',
+  },
+    {
     title: 'Requirements Documentation',
     description:
       'BRDs, FRDs, RTMs, and functional specifications that translate business needs into build-ready requirements.',
@@ -223,11 +269,6 @@ export const services = [
     title: 'Stakeholder Workshops & UAT',
     description:
       'Facilitated workshops, walkthroughs, and UAT cycles that keep business, technical, and product teams aligned.',
-  },
-  {
-    title: 'Claims & Fraud Analysis',
-    description:
-      'Claims adjudication, denial management, and fraud detection support across the full claims processing lifecycle.',
   },
 ]
 

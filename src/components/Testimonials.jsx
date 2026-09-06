@@ -1,4 +1,4 @@
-import { testimonials } from '../data/data'
+import { heroTestimonialPreviews } from '../data/data'
 import { SectionHeading } from './Projects'
 
 export default function Testimonials() {
@@ -12,18 +12,22 @@ export default function Testimonials() {
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          {testimonials.map((t) => (
+          {heroTestimonialPreviews.map((t) => (
             <figure
               key={t.author}
               className="rounded-3xl border border-line bg-bg-card p-7"
+              style={ { display: 'flex', flexDirection: 'row', alignItems: 'center', columnGap: '1rem'
+               } }
             >
+                <img
+                    src={t.image}
+                    alt={t.author}
+                    className="h-14 w-14 flex-shrink-0 rounded-full object-cover"
+                  />
               <blockquote className="font-body text-base leading-relaxed text-ink">
-                "{t.quote}"
+                "{t.quote}" <span style={{fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '0.875rem'}}className="font-display text-sm text-ink">...{t.author}</span>
               </blockquote>
-              <figcaption className="mt-5">
-                <p className="font-display text-sm font-semibold text-ink">{t.author}</p>
-                <p className="font-body text-xs text-ink-faint">{t.role}</p>
-              </figcaption>
+                                      
             </figure>
           ))}
         </div>
