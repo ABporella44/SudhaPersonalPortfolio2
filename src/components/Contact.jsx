@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react'
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone,Loader2 } from 'lucide-react'
 import { profile } from '../data/data'
+import emailjs from '@emailjs/browser'
 
 const socialIcons = {
   Facebook,
@@ -25,8 +26,24 @@ export default function Contact() {
     }
     // No backend is wired up — this simulates a successful submission
     // so the form is fully interactive out of the box.
-    setStatus('success')
+    setStatus('sending')
     setForm(initialForm)
+        emailjs
+      .send('service_hxl8lug', 'template_7xvaupi', form, 'LFL5N4_l7Hja4bHkD')
+      .then(() => {
+             setStatus('success')
+      })
+      .catch(() => {
+        setStatus('error')
+      })
+      .finally(() => {
+
+        setTimeout(() => {
+          setStatus('idle')
+        }, 3000)
+      });
+      setForm(initialForm)
+
   }
 
   return (
@@ -76,7 +93,10 @@ export default function Contact() {
               type="submit"
               className="mt-2 w-fit rounded-full bg-accent px-7 py-3 font-body text-sm font-semibold text-bg-primary transition-transform hover:scale-[1.03]"
             >
-              Submit
+      {status === 'sending' ? 
+              <p className="font-body text-sm text-ink-muted">Sending your message...</p> : 
+              <p className="font-body text-sm text-ink-muted">Submit</p>
+            }
             </button>
 
             {status === 'success' && (

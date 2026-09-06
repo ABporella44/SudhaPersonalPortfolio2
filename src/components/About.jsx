@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="bg-bg-secondary py-24">
       <div className="mx-auto max-w-content px-6">
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-14 lg:grid-cols-[65fr_35fr] lg:items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-pill border border-line bg-bg-card/60 px-4 py-1.5 text-xs text-ink-muted">
               <span className="h-2 w-2 rounded-full border-2 border-accent" />
@@ -15,10 +15,10 @@ export default function About() {
             <h2 className="mt-6 font-display text-3xl font-semibold text-ink sm:text-4xl">
               {profile.aboutHeadline}
             </h2>
-
-            <p className="mt-4 max-w-md font-body leading-relaxed text-ink-muted">
+ <div className="mt-4 font-body leading-relaxed text-ink-muted">            
               {profile.aboutBio}
-            </p>
+            </div>
+
 
             <div className="mt-8 flex flex-wrap gap-10">
               {profile.stats.map((stat) => (
