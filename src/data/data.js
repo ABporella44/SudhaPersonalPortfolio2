@@ -273,11 +273,29 @@ export const services = [
 ]
 
 export const education = [
+    {
+    degree: 'Certification in Business Analysis',
+    school: 'BA2 Institute of Business Analysis',
+    period: '2021-2022', // TODO: resume didn't list graduation years
+    detail: 'GPA: 3.45',
+  },
   {
     degree: 'Bachelor of Commerce in Computers',
     school: 'Osmania University',
-    period: '', // TODO: resume didn't list graduation years
+    period: '2010-2013', // TODO: resume didn't list graduation years
     detail: 'GPA: 75.9',
+  },
+    {
+    degree: 'Board of Intermediate Education (BIE)',
+    school: 'Sri Chaitanya Junior College',
+    period: '2008-2010', // TODO: resume didn't list graduation years
+    detail: 'GPA: 85.5',
+  },
+  {
+    degree: 'Board of Secondary School Education (SSE)',
+    school: 'Bashyam Public school, Hyderabad',
+    period: '2008-2010', // TODO: resume didn't list graduation years
+    detail: 'GPA: 91',
   },
 ]
 
