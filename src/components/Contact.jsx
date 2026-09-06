@@ -113,7 +113,7 @@ export default function Contact() {
 
           <div className="rounded-3xl bg-bg-elevated p-6">
             <p className="font-display text-lg font-semibold text-ink">
-              Hello, We are always here to help you.
+             Get In Touch With Me For Your Projects And Collaborations.
             </p>
 
             <div className="mt-6 flex items-center gap-3">
