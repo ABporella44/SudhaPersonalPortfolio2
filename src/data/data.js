@@ -1,20 +1,10 @@
 // ---------------------------------------------------------------------------
-// Content sourced from the uploaded resume (Resume_4.pdf) for
-// Sudha Sravanthi Kancharla, Business Analyst.
-//
-// A few fields aren't stated anywhere in the resume -- marked below with
-// "TODO" -- fill these in yourself rather than trusting a guess:
-//   - profile.resumeUrl   (link to a hosted copy of the PDF)
-//   - profile.socials     (no LinkedIn/social links were on the resume)
-//   - education[0].period (no graduation years were listed)
-//   - testimonials        (no client/manager quotes were on the resume)
-// ---------------------------------------------------------------------------
 
 export const profile = {
   name: 'Sudha Sravanthi Kancharla',
   role: 'Business Analyst',
   tagline:
-    "Results-driven Business Analyst with extensive experience in healthcare and insurance domains, delivering solutions through Agile/Scrum methodologies and SAFe frameworks. I translate complex requirements into BRDs, FRDs, RTMs, and JIRA stories that keep product and AI initiatives moving. Skilled in claims management, fraud detection, and ensuring regulatory alignment with HIPAA, CMS, ISO, and Medicare/Medicaid rules. I partner closely with developers, product owners, and data scientists to turn business needs into technical solutions, and I've driven automation initiatives that cut testing time by 40% — earning recognition along the way, including an award for 157% productivity.",
+    "Results-driven Business Analyst with extensive experience in healthcare and insurance domains, delivering solutions through Agile/Scrum methodologies and SAFe frameworks. I translate complex requirements into BRDs, FRDs, RTMs, and JIRA stories that keep product and AI initiatives moving. Skilled in claims management, fraud detection, and ensuring regulatory alignment with HIPAA, CMS, ISO, and Medicare/Medicaid rules. I partner closely with developers, product owners, and data scientists to turn business needs into technical solutions, and I've driven automation initiatives that cut testing time by 40% — earning recognition along the way, including an award for 100% productivity.",
   aboutHeadline: 'Business Analyst',
   aboutBio:
 'Software delivery professional with strong expertise in Software Development Life Cycle (SDLC) management, including Agile and Scrum methodologies — covering sprint planning, backlog grooming, requirement gathering, and iterative delivery. Primary domain expertise in healthcare and insurance, with hands-on experience in claims management, fraud detection, and regulatory alignment with HIPAA, CMS, ISO, and Medicare/Medicaid standards. Experienced across the full SDLC — from technical product development and requirement gathering through functional testing, end-user (UAT) testing, and final delivery — for healthcare and insurance domain projects. Recognized for cross-functional collaboration with developers, product owners, and data scientists, and for driving automation initiatives that reduced testing time by 40%. Actively engaged in integrating AI-driven solutions into healthcare systems, including predictive analytics for claims processing, automated fraud detection models, and AI-assisted clinical/administrative workflows — helping bridge traditional healthcare IT operations with emerging intelligent automation, while maintaining strict compliance with HIPAA, CMS, ISO, and Medicare/Medicaid regulatory frameworks.',
@@ -25,7 +15,7 @@ export const profile = {
   stats: [
     { label: 'Years Experience', value: '12+' },
     { label: 'Testing Time Cut', value: '40%' },
-    { label: 'Productivity Award', value: '157%' },
+    { label: 'Productivity Award', value: '100%' },
   ],
   socials: [
     // TODO: the resume didn't list social/profile links -- add your real ones
@@ -304,7 +294,7 @@ export const certifications = ['Certified Business Analyst']
 export const languages = ['English', 'Hindi', 'Telugu']
 
 export const accomplishments = [
-  'Received the Annual Award for achieving 157% productivity.',
+  'Received the Annual Award for achieving 100% productivity.',
   "Authored an article on how AI can transform healthcare systems -- covering claims processing, fraud detection, and clinical workflows -- featured on Zelis' main website starting December.",
 ]
 
